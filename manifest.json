@@ -1,0 +1,22 @@
+{
+  "name": "d'acronym",
+  "version": "1.0",
+  "manifest_version": 2,
+  "description": "It theoretically should expand every acronym on this page.",
+  "browser_action": {
+    "default_icon": "icon.png"
+  },
+    "background": {
+    "scripts": ["click.js"],
+    "persistent": false
+  },
+    "content_scripts": [
+    {
+      "matches": ["http://*/*"],
+      "js": ["modifier.js"]
+    }
+  ],
+  "permissions": [
+    "tabs"
+  ]
+}
